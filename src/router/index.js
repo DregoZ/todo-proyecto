@@ -1,29 +1,40 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+/** 15. modificamos e importamos las views, podemos ponerle los nombres que queramos... */
+import Dashboard from '../views/Dashboard.vue'
+import Projects from '../views/Projects.vue'
+import Team from '../views/Team.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+
+/** 16. En la const routes (componente de la const router, q llamamos desde la lista del drawer
+ * especificamos los path de cada componente
+ */
+const routes = [{
+        path: '/',
+        name: 'Dashboard',
+        component: Dashboard
+    },
+    {
+        path: '/projects',
+        name: 'Projects',
+        component: Projects
+    },
+    {
+        path: '/team',
+        name: 'Team',
+        component: Team
+    }
 ]
 
+/** 17. const que es exportada y q contiene los path de los componentes.
+ * Seguimos modificando los compoenentes (Dashboard, Team, Projects) para definir su aspecto... --->
+ */
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router
