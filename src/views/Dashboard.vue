@@ -97,9 +97,8 @@
 // @ is an alias to /src
 
 export default {
-  data() {
-    return {
-      projects: [
+  data: () => ({
+          projects: [
         {
           title: "Learn this Vue thing",
           person: "That Antwan Guy",
@@ -143,8 +142,8 @@ export default {
         }
 
       ]
-    };
-  },
+    }),
+  
 
   /** Función que ordena los elementos  */
   methods: {
