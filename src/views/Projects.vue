@@ -67,7 +67,14 @@ export default {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
       }
     ]
-  })
+  }),
+  computed: {
+    misProyectos() {
+      return this.projects.filter(project => {
+        return project.person == 'That Antwan Guy'
+      } )
+    }
+  }
 };
 </script>
  
