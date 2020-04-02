@@ -12,14 +12,17 @@
         <span>Reshulona</span>
       </div>
 
+
       <!-- 9. v-spacer espacia los elementos a derecha e izquierda -->
       <v-spacer></v-spacer>
-
+      
+      <!-- botón con menu desplegable y enlaces a las diferentes páginas -->
       <div class="text-center px-4">
-        <v-menu offset-y>
+        <!-- offset-y hace que el desplegable no cubra el botón -->
+        <v-menu offset-y >
           <template v-slot:activator="{ on }">
             <v-btn outlined color="grey" dark v-on="on">
-              <v-icon>mdi-arrow-expand-down</v-icon>menu
+              <v-icon>mdi-chevron-down</v-icon>menu
             </v-btn>
           </template>
           <v-list>
@@ -55,7 +58,7 @@
         <v-list-item-group>
           <!-- 14. router :to="link.route" nos permite navegar por las diferentes views
           sin cerrar el drawer. Es necesario midificar las rutas en router/index.js... ------>
-          <v-list-item v-for="link in links" :key="link.text" router>
+          <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
             <v-list-item-action>
               <!-- separador -->
               <v-list-item-icon>
