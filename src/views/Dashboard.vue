@@ -102,7 +102,7 @@ export default {
         {
           title: "Learn this Vue thing",
           person: "That Antwan Guy",
-          due: "1 Abr 2020",
+          due: "1 Apr 2020",
           status: { name: "complete", color: "light-blue lighten-4" },
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
@@ -110,7 +110,7 @@ export default {
         {
           title: "Hack a web site",
           person: "Hackerman",
-          due: "10 Ene 2021",
+          due: "10 Jan 2021",
           status: { name: "held", color: "red" },
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
@@ -118,7 +118,7 @@ export default {
         {
           title: "Master the Shoryuken",
           person: "Ryu",
-          due: "20 Dic 2022",
+          due: "20 Dec 2022",
           status: { name: "complete", color: "light-blue lighten-4" },
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"

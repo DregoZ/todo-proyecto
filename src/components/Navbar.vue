@@ -12,14 +12,13 @@
         <span>Reshulona</span>
       </div>
 
-
       <!-- 9. v-spacer espacia los elementos a derecha e izquierda -->
       <v-spacer></v-spacer>
-      
+
       <!-- botón con menu desplegable y enlaces a las diferentes páginas -->
       <div class="text-center px-4">
         <!-- offset-y hace que el desplegable no cubra el botón -->
-        <v-menu offset-y >
+        <v-menu offset-y>
           <template v-slot:activator="{ on }">
             <v-btn outlined color="grey" dark v-on="on">
               <v-icon>mdi-chevron-down</v-icon>menu
@@ -27,6 +26,7 @@
           </template>
           <v-list>
             <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
+              <v-icon class="grey--text px-2">{{link.icon}}</v-icon>
               <v-list-item-title>{{ link.text }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -49,8 +49,11 @@
             <img src="/antwan.jpg" alt="A really handsome dude" />
           </v-avatar>
           <p class="white--text subtitle-1 mt-1">That Antwan Guy</p>
+
+          <Popup></Popup>
         </v-col>
       </v-row>
+
       <v-divider></v-divider>
 
       <!-- 13. Lista de los elementos en links que aparecerán en el drawer. Muestra un icono seguido del texto asociado -->
@@ -78,7 +81,9 @@
 
 
 <script>
+import Popup from "./Popup";
 export default {
+  components: { Popup },
   data: () => ({
     drawer: false,
     links: [
